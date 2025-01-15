@@ -4,7 +4,7 @@ Created on Sat Jan 11 16:01:42 2025
 
 Arbeidskrav 2, py1010
 
-@author: AFL015
+@author: Aleksander Larsen
 """
 
 #%% 

@@ -76,13 +76,13 @@ myfun ()
 x = 10
 
 def myfun ():
-    x = x + 1
+    # x = x + 1  # gir feil
     print ( x )
 
 myfun ()
 
 # Mitt svar: Ja, det fungerer. Skriver ut 11
-# Løsning: feil! UnboundLocalError: cannot access local variable 'x' where it is not associated with a value
+# Løsning: feil! UnboundLocalError: cannot access local variable 'x' where it is not associated with a value. Skulle feks vært x =+ 1
 
 #%% Oppg 5.9
 
@@ -116,8 +116,32 @@ plt.legend(labels=('fun_f(x)', 'fun_g(x)'))
 # plt.savefig('plot_fun_plot.pdf')
 plt.show()
 
-#%% Oppg 5.16
+#%% Tester moduler før oppg 5.16..
 
+import sys
+#sys.path.append('C:/Users/AFL015/USN_py_gk/py1010/Oppgaver/moduler') # absolutt sti
+sys.path.append('moduler')  # relativ sti
+import minmodul as mm
+
+#import importlib
+#importlib.reload(mm)
+
+mm.greeting("Jonathan")
+
+x = dir(mm)
+print('Innhold i minmodul.py:', x)
+
+#%% Oppg 5.16
+import sys
+sys.path.append('moduler')
+import rektangel_modul as rm
+
+L = 3.0
+B = 4.0 
+
+print('Areal rektangel:', rm.areal_rektangel(L, B))
+print('Omkrets rektangel:', rm.omkrets_rektangel(L, B))
+print('Diagonal rektangel:', rm.diagonal_rektangel(L, B))
 
 
 

@@ -2,7 +2,7 @@
 """
 Created on Sun Mar 30 11:25:00 2025
 
-@author: AFL015
+@author: Aleksander Larsen
 
 Prosjektoppgave "Support dashboard"
 
